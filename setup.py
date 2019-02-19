@@ -10,7 +10,7 @@ setup(
     install_requires=['requests'],
     url='https://github.com/oeysteinhansen/pyswetrack',
     author='Øystein Hansen',
-    author_email='oeysteinhansen@gmail.com'
+    author_email='oeysteinhansen@gmail.com',
     test_suite='nose.collector',
     tests_require=['nose'],
 )
