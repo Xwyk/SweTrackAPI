@@ -14,13 +14,13 @@ class Session():
 
     def login(self):
         if self.session == None:
-            response = requests.post( self.baseUrl + '/login', data = {'Username':self.username, 'Password':self.password})
+            response = requests.post( self.baseUrl + '/login', data = {'Email':self.username, 'Password':self.password})
             self.session = response.json()
             
             #print("Session Loggin:" + repr(self.session))
             
             if "error" in self.session:
-                print( "Unable to login: ", data["error"] )
+                print( "Unable to login: ", self.session )
                 return False
             if not "AccessToken" in self.session:
                 print( "Unable to login: AccessToken missing.")
